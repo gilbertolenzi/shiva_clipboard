@@ -1,0 +1,21 @@
+{
+  "manifest_version": 2,
+  "name": "Shiva Clipboard",
+  "description": "This extension grab the images to copy image Url from noths website.",
+  "version": "1.0",
+  "homepage_url": "http://www.notonthehighstreet.com/",
+  "browser_action": {
+    "default_icon": "images/icon.png",
+    "default_popup": "popup.html"
+  },
+  "permissions" : ["tabs", "http://*/*", "clipboardRead", "clipboardWrite"],
+
+  "web_accessible_resources": [
+    "select_image.js"
+  ],
+  "icons": {
+    "16" : "images/icon.png",
+    "48" : "images/icon_48.png",
+    "128" : "images/icon_128.png"
+  }
+}
