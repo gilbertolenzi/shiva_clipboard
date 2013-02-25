@@ -6,7 +6,7 @@ $(document).ready(function(){
 
   function showLinks() {
     visibleLinks.forEach(function(e,index) {
-      $("#shiva_container_images ul").append("<li id='image_" + index + "'><a href='#' id='clipboard_text_"+ index +"'>" + "<img src='" + e + "'/>" + "</a><span class='shiva_text_clipboard' id ='clipboard_text_"+ index +"'>" + index + "</span></li>");
+      $("#shiva_container_images ul").append("<li id='image_" + index + "'><a href='#' id='clipboard_text_"+ index +"'><font>" + e + "</font><img src='" + e + "'/>" + "</a><span class='shiva_text_clipboard' id ='clipboard_text_"+ index +"'>" + index + "</span></li>");
     });
   };  
 
@@ -15,7 +15,7 @@ $(document).ready(function(){
     visibleLinks.forEach(function(e,index){
       $("#shiva_select_image").append("<option value='"+ e +"'>Image " + index + "</option>");
     });
-  };  
+  };
 
   chrome.extension.onMessage.addListener(function(content) {
     visibleLinks = content.images;
@@ -41,21 +41,25 @@ $(document).ready(function(){
         $("#shiva_select_image").on("change", function(){
           var str = "";
           var selectValue = "";
+         
 
           $("#shiva_select_image option:selected").each(function () {
             str += $(this).text() + " ";
             selectValue += $(this).val() + " ";
           });
-          
+
+          $('#shiva_container_images a.selected').removeClass('selected');
 
           //debug which value am i getting?
           // console.log('The option with value ' + selectValue + ' and text ' + str + ' was selected.');
           
           //print the value in the popu.html view
-          $("#shiva_container_image_path").html(selectValue);
+          $("#shiva_container_image_path").html(selectValue); 
+          $('#shiva_container_images a:contains(' + $(this).val() + ')').removeClass('notselected').addClass('selected');
         })
         .trigger('change');
       });
+
     });
   };
 });
