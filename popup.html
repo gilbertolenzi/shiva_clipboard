@@ -101,6 +101,7 @@ body {
 	font-weight: 300;
 	color: #434343;
 	margin: 20px 0 0 20px;
+	display: none;
 }
 #product_attributes div {
 	margin: 4px 0px;
@@ -120,18 +121,17 @@ body {
 <script src="copy_clipboard.js"></script>
 </head>
 <body id="shiva_popup">
-	<p class="helper_text">select an image from the list</p>
-	
 	<div id="shiva_container_images">
 	  <ul></ul>
 	</div>
-	
+	<p class="helper_text">Select an image from the list</p>
 	<select id="shiva_select_image">
 		
 	</select>
 
-	<p class="helper_text">Product Attributes</p>
+	
 	<div id="product_attributes">
+		<p class="helper_text">Product Attributes</p>
 		<div id="shiva_container_title">
 		</div>
 		<div id="shiva_container_partner">
@@ -140,10 +140,12 @@ body {
 		</div>
 		<div id="shiva_container_url">
 		</div>
+		<div id="shiva_container_image_path">
+		</div>
 	</div>
 	
 	<div id="shiva_clipboard">
-		<p class="helper_text">Theme number (1-2-3-4-...)</p>
+		<p class="helper_text">Select a Theme number (1-2-3-4-&hellip;)</p>
     	<input type="text" />
 	</div>
 </body>
