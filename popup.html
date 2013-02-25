@@ -8,7 +8,8 @@ body {
   min-height: 100%;
   overflow-x: hidden;
   background-color: whitesmoke;
-  font-family: 'helvetica neue','helveticaneue','HelveticaNeue';
+  font-family: 'helvetica neue' 'helveticaneue'  'HelveticaNeue';
+  font-size: 16px;
 }
 
 #shiva_container_images {
@@ -55,7 +56,7 @@ body {
 	padding:10px;
 	color: #434343;
 	border-bottom: 1px solid #2c4e31;
-	font-family: 'helvetica neue','helveticaneue','HelveticaNeue';
+	font-family: 'helvetica neue' 'helveticaneue'  'HelveticaNeue';
 	font-size: 16px;
 	font-weight: 300;
 	-webkit-margin-before: 0;
@@ -69,7 +70,7 @@ body {
 	width: 102px;
 	height: 20px;
 	display: block;
-	font-family: 'helvetica neue','helveticaneue','HelveticaNeue';
+	font-family: 'helvetica neue' 'helveticaneue'  'HelveticaNeue';
 	color: #434343;
 	line-height: 20px;
 	text-align: left;
@@ -87,7 +88,7 @@ body {
 	display: inline-block;
 	color: #ffffff;
 	-webkit-border-radius: 6px;
-	font-family: 'helvetica neue','helveticaneue','HelveticaNeue';
+	font-family: 'helvetica neue' 'helveticaneue'  'HelveticaNeue';
 	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
 	background-color: #006dcc;
 	background-image: -moz-linear-gradient(top, #0088cc, #0044cc);
@@ -109,7 +110,7 @@ body {
 	border: 2px solid #ff0000;
 }
 #product_attributes {
-	font-family: 'helvetica neue','helveticaneue','HelveticaNeue';
+	font-family: 'helvetica neue' 'helveticaneue'  'HelveticaNeue';
 	font-size: 16px;
 	font-weight: 300;
 	color: #434343;
@@ -124,20 +125,24 @@ body {
 	line-height: 40px;
 	font-size: 14px;
 }
-img.active {
-	border: 2px solid red;
-	-webkit-box-shadow: 0px 3px 20px rgba(0,0,0,.9);
-	-moz-box-shadow: 0px 3px 20px rgba(0,0,0,.9);
-	box-shadow: 0px 3px 20px rgba(0,0,0,.9);
+#shiva_select_image {
+	height: 50px;
+	line-height: 50px;
+	width: 100%;
 }
 </style>
+<script src="copy_clipboard.js"></script>
 </head>
 <body id="shiva_popup">
 	<p class="helper_text">select an image from the list</p>
 	
 	<div id="shiva_container_images">
-	  <ul class="shiva_choose_image"></ul>
+	  <ul></ul>
 	</div>
+	
+	<select id="shiva_select_image">
+		
+	</select>
 
 	<p class="helper_text">Product Attributes</p>
 	<div id="product_attributes">
