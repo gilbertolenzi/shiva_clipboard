@@ -1,4 +1,4 @@
-var carousel_images = $(".browsable .carousel_wrap img").map(function(){
+var carousel_images = $(".product_main_image_container ul li a img").map(function(){
   return $(this).attr('src').replace(/assets\d*/, "www").replace(/\?\d*/, "");
 });
 var product_title = $("#product_header h1").text();
